@@ -13,7 +13,7 @@ object LongestSubstring {
       val len = s.length
       var out = 0
       var max =0
-      for(i <- 0 until len){
+      for(i <- 0 until len/2){
         val mapper = new mutable.ListMap[Char, Int]
         mapper += (s(i) -> 1)
         breakable(
@@ -33,5 +33,18 @@ object LongestSubstring {
       }
       max
     }
+
+  def lengthOfLongestSubstring2(s : String) : Int = {
+    val len = s.length
+    var ans = 0
+    val arr: Array[Int] = new Array[Int](128)
+    var i =0
+    for(j <- 0 to len-1){
+      i= Math.max(arr(s.charAt(j)),i)
+      ans = Math.max(ans, j-i+1)
+      arr(s.charAt(j)) = (j+1)
+    }
+    ans
+  }
 
 }

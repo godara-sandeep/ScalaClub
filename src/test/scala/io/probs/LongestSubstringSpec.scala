@@ -15,7 +15,15 @@ class LongestSubstringSpec extends FlatSpec with Matchers {
     val start = Instant.now()
     Console println lengthOfLongestSubstring("abcedasdfklasdfqwertyuiopasdfghjkl;zxcvbnmadeeffjqwerttyuiopasdfghjkl;zxcvbnmsilkjlksdfoieoiuweroijwerlkjsd;flkjsdf;lkjsdfhkdflkjsdlfkjsdf;lkjsdfpoiert,mfkdjd;ldfllldasdfgrtyoipweljzdlkjsdflkj")
     val time = Duration.between(start, Instant.now())
-    Console println "2. Time: "+ time.toMillis
+    Console println "1. Sachin Time: "+ time.toMillis
   }
 
+
+  "lengthOfLongestSubstring2" should "get the length of string" in {
+    lengthOfLongestSubstring2("pwwkew") shouldEqual 3
+    val start = Instant.now()
+    Console println lengthOfLongestSubstring2("abcedasdfklasdfqwertyuiopasdfghjkl;zxcvbnmadeeffjqwerttyuiopasdfghjkl;zxcvbnmsilkjlksdfoieoiuweroijwerlkjsd;flkjsdf;lkjsdfhkdflkjsdlfkjsdf;lkjsdfpoiert,mfkdjd;ldfllldasdfgrtyoipweljzdlkjsdflkj")
+    val time = Duration.between(start, Instant.now())
+    Console println "2. Sachin Time: "+ time.toMillis
+  }
 }
