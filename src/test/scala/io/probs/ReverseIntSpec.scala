@@ -14,6 +14,8 @@ class ReverseIntSpec extends FlatSpec with Matchers{
     rev(1563847412) shouldEqual 0
     rev(-2147483647) shouldEqual 0
     rev(1) shouldEqual 1
+    rev(-1) shouldEqual -1
+    rev(-855) shouldEqual -558
     rev(Int.MaxValue) shouldEqual 0
   }
 }

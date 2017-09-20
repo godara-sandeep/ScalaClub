@@ -8,8 +8,7 @@ object ReverseInt {
   def rev(n:Int, res:Int=0):Int=
     if(n==0)res
     else {
-      val digit = n % 10
       if (Math.abs(Int.MaxValue / 10)  < Math.abs(res)) 0 else
-        rev(n / 10, res * 10 + digit)
+        rev(n / 10, res * 10 + n % 10)
     }
 }
