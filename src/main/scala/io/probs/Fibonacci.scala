@@ -15,7 +15,6 @@ object Fibonacci {
         n,
         {
           map += (n -> (fibMemoized(n - 1, map) + fibMemoized(n - 2, map)))
-          println(map)
           map(n)
         }
       )
