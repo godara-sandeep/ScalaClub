@@ -1,5 +1,7 @@
 package io.probs
 
+import scala.annotation.tailrec
+
 /**
   * Created by sandeepgodara on 9/15/17.
   */
@@ -36,6 +38,15 @@ object LongestSubStr {
         longestSubStr2(strTail, (currentSubStr.splitAt(idx + 1)._2 + char) :: list)
 
       else longestSubStr2(strTail, (currentSubStr + char) :: tail)
+    }
+  }
+
+  @tailrec
+  def longestSubStr3(str:String, pos:Int=1, dropped:Int=0, res:Int=0, posMap:collection.mutable.Map[Char, Int]=collection.mutable.Map()):Int={
+    if(str.length==0) res
+    else {
+      val drop = Math.max(dropped, posMap.getOrElse(str.head, 0))
+      longestSubStr3(str.tail, pos + 1, drop, Math.max(res, pos - drop), posMap += (str.head -> pos))
     }
   }
 

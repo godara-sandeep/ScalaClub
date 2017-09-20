@@ -37,6 +37,18 @@ class LongestSubStrSpec extends FlatSpec with Matchers{
   }
 
 
+  "Sliding Window technique" should " return longest sub string.." in{
+    longestSubStr3("abcae") shouldEqual 4
+    longestSubStr3("abcabcbb") shouldEqual 3
+    longestSubStr3("bbbbb") shouldEqual 1
+    longestSubStr3("pwwkew") shouldEqual 3
+    val start = Instant.now()
+    Console println longestSubStr3("abcedasdfklasdfqwertyuiopasdfghjkl;zxcvbnmadeeffjqwerttyuiopasdfghjkl;zxcvbnmsilkjlksdfoieoiuweroijwerlkjsd;flkjsdf;lkjsdfhkdflkjsdlfkjsdf;lkjsdfpoiert,mfkdjd;ldfllldasdfgrtyoipweljzdlkjsdflkj")
+    val time = Duration.between(start, Instant.now())
+    Console println "3. Time: "+ time.toMillis
+  }
+
+
 
 
 }
