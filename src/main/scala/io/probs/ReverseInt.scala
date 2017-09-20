@@ -9,7 +9,7 @@ object ReverseInt {
     if(n==0)res
     else {
       val digit = n % 10
-      if (Int.MaxValue / 10 + digit < res) 0 else
+      if (Int.MaxValue / 10  < res) 0 else
         rev(n / 10, res * 10 + digit)
     }
 }
