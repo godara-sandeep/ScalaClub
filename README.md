@@ -1,27 +1,4 @@
 # ScalaClub
-
-PROBLEM 1 :
-    Given a string, find the length of the longest substring without repeating characters.
-
-    Examples:
-
-    Given "abcabcbb", the answer is "abc", which the length is 3.
-
-    Given "bbbbb", the answer is "b", with the length of 1.
-
-    Given "pwwkew", the answer is "wke", with the length of 3. Note that the answer must be a substring, "pwke" is a
-    subsequence and not a substring.
-
-PROBLEM 2 :
-Reverse digits of an integer.
-
-    Example1: x = 123, return 321
-    Example2: x = -123, return -321
-
-    Note:
-    The input is assumed to be a 32-bit signed integer. Your function should return 0 when the reversed 
-    integer overflows.
-
 PROBLEM 3 :
 Given an array of integers, return indices of the two numbers such that they add up to a specific target.
 
@@ -32,3 +9,18 @@ Given an array of integers, return indices of the two numbers such that they add
 
     Because nums[0] + nums[1] = 2 + 7 = 9,
     return [0, 1].
+    
+    
+PROBLEM 4 :(Will be Going Dynamic now on words)
+
+General math concept of Binomial Coefficient 
+1) A binomial coefficient C(n, k) can be defined as the coefficient of X^k in the expansion of (1 + X)^n.
+
+2) A binomial coefficient C(n, k) also gives the number of ways, disregarding order, that k objects can be chosen from 
+among n objects; more formally, the number of k-element subsets (or k-combinations) of an n-element set.
+
+For referral study : https://en.wikipedia.org/wiki/Binomial_coefficient
+Focus on how the pascal triangle is created 
+
+    Write a function that takes two parameters n and k and returns the value of Binomial Coefficient C(n, k). 
+    For example, your function should return 6 for n = 4 and k = 2, and it should return 10 for n = 5 and k = 2.
