@@ -24,5 +24,4 @@ class ReverseIntegerSpec extends FlatSpec with Matchers{
     val time = Duration.between(start, Instant.now())
     Console println "Total Time by Sachin: "+time.toNanos
   }
-
 }
